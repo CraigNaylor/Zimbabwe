@@ -1,5 +1,13 @@
+* {
+    box-sizing: border-box;
+  }
+
 body {
     background-color: rgb(154, 163, 163);
+    background-image: url("../Images/horizon.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .header {
@@ -21,31 +29,65 @@ body {
     font-size: 18px;
     font-family:'Times New Roman', Times, serif;
     text-decoration: none;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 7px;
 }
 
-
-
-.grid-container {
-    margin: 0 5%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "flag flag"
-    "falls great";
+#categoryGrid {
+    margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 320px 320px 320px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "f f f"
+  "f f f"
+  "g w v"
 }
 
 #flag {
-    grid-area: flag;
-    background-image: url("/Images/flag.png");
-}
-
-#falls {
-    grid-area: falls;
-    background-image: url("/Images/Falls.jpg");
+    grid-area: f;
+    background-image: url("../Images/brush flag.webp");
 }
 
 #great {
-    grid-area: great;
-    background-image: url("/Images/great.jpg");
+grid-area: g;
+background-image: url("../Images/great.jpg");
 }
+
+#falls {
+    grid-area: v;
+    background-image: url("../Images/Falls.jpg");
+}
+
+#wild {
+    grid-area: w;
+    background-image: url("../Images/wildlife.jpg");
+}
+
+.categoryGridArea {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+   
+  }
+
+  .heading {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    border-bottom: 5px solid #FF6200;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
